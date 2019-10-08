@@ -1,0 +1,120 @@
+{
+	"[html]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "HookyQR.beautify"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"editor.detectIndentation": false,
+	"editor.fontFamily": "OperatorMonoSSmLig-Book",
+	"editor.fontLigatures": true,
+	"editor.fontSize": 13,
+	"editor.fontWeight": "normal",
+	"editor.formatOnPaste": false,
+	"editor.formatOnSave": true,
+	"editor.formatOnType": false,
+	"editor.insertSpaces": false,
+	"editor.lineHeight": 20,
+	"editor.quickSuggestions": {
+		"comments": false,
+		"other": true,
+		"strings": false
+	},
+	"editor.quickSuggestionsDelay": 5,
+	"editor.renderWhitespace": "all",
+	"editor.rulers": [
+		120
+	],
+	"eslint.autoFixOnSave": true,
+	"eslint.run": "onSave",
+	"eslint.validate": [
+		"javascript",
+		"javascriptreact",
+		{
+			"autoFix": true,
+			"language": "typescript"
+		},
+		{
+			"autoFix": true,
+			"language": "typescriptreact"
+		}
+	],
+	"explorer.decorations.badges": true,
+	"files.associations": {
+		"*.html": "html",
+		"*.njk": "html"
+	},
+	"files.autoSaveDelay": 100,
+	"git.autofetch": true,
+	"git.confirmSync": false,
+	"git.enableSmartCommit": true,
+	"gitlens.mode.active": "review",
+	"javascript.implicitProjectConfig.experimentalDecorators": true,
+	"material-icon-theme.activeIconPack": "vue",
+	"prettier.eslintIntegration": true,
+	"prettier.jsxSingleQuote": true,
+	"prettier.printWidth": 120,
+	"prettier.requireConfig": true,
+	"prettier.semi": true,
+	"prettier.singleQuote": true,
+	"prettier.tabWidth": 4,
+	"prettier.trailingComma": "es5",
+	"prettier.tslintIntegration": true,
+	"prettier.useTabs": true,
+	"scssFormatter.tabWidth": 4,
+	"scssFormatter.useTabs": true,
+	"sync.autoDownload": false,
+	"sync.autoUpload": true,
+	"sync.forceDownload": false,
+	"sync.gist": "15915d5c24f135c3270e40c3cb50d031",
+	"sync.quietSync": true,
+	"sync.removeExtensions": true,
+	"sync.syncExtensions": true,
+	"terminal.external.osxExec": "iTerm.app",
+	"terminal.integrated.cursorStyle": "line",
+	"terminal.integrated.enableBell": true,
+	"terminal.integrated.fontFamily": "OperatorMonoSSmLig Nerd Font",
+	"terminal.integrated.fontSize": 14,
+	"terminal.integrated.rendererType": "canvas",
+	"terminal.integrated.scrollback": 10000,
+	"terminal.integrated.shell.osx": "/bin/zsh",
+	"vetur.format.defaultFormatter.css": "prettier",
+	"vetur.format.defaultFormatter.html": "prettyhtml",
+	"vetur.format.defaultFormatter.js": "prettier",
+	"vetur.format.defaultFormatter.less": "prettier",
+	"vetur.format.defaultFormatter.postcss": "prettier",
+	"vetur.format.defaultFormatter.scss": "prettier",
+	"vetur.format.defaultFormatter.stylus": "stylus-supremacy",
+	"vetur.format.defaultFormatter.ts": "prettier",
+	"vetur.format.options.tabSize": 4,
+	"vetur.format.options.useTabs": true,
+	"vetur.validation.script": true,
+	"vetur.validation.style": true,
+	"vetur.validation.template": true,
+	"window.title": "${activeEditorLong}${separator}${rootName}",
+	"window.zoomLevel": 0,
+	"workbench.colorTheme": "Monokai Pro (Filter Machine)",
+	"workbench.fontAliasing": "antialiased",
+	"workbench.iconTheme": "material-icon-theme",
+	"workbench.startupEditor": "newUntitledFile",
+	"sync.forceUpload": true,
+	"todo-tree.highlights.customHighlight": {
+		"FIXME": {},
+		"TODO": {}
+	},
+	"todo-tree.highlights.defaultHighlight": {
+		"foreground": "green",
+		"type": "none"
+	},
+	"editor.minimap.enabled": false,
+	"gitlens.hovers.currentLine.over": "line"
+}
