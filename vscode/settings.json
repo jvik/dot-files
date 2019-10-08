@@ -109,5 +109,6 @@
 		"type": "none"
 	},
 	"editor.minimap.enabled": false,
-	"gitlens.hovers.currentLine.over": "line"
+	"gitlens.hovers.currentLine.over": "line",
+	"sync.gist": "4f4b83d8d15c773f003c1106ba83a042"
 }

@@ -6,7 +6,7 @@ export PATH=~/.npm-global/bin:$PATH
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
 # Asd
-export LC_ALL=nb_NO.UTF-8
+# export LC_ALL=nb_NO.UTF-8
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/jvik/.oh-my-zsh"
 
