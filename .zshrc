@@ -159,3 +159,11 @@ export NVM_DIR="$HOME/.nvm"
 
 alias config='/usr/bin/git --git-dir=/home/jvik/.cfg/ --work-tree=/home/jvik'
 alias listening='sudo lsof -i -n -P | grep TCP | grep $PORT'
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias gitlog="git log --graph --decorate -p"
+alias gitshortlog="git shortlog -sn"
+alias gitteamlog="git log --all --oneline --no-merges"
+alias weather="curl wttr.in/Kristiansund"
+
