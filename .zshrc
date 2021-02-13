@@ -15,7 +15,7 @@ export ZSH="/home/jvik/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -52,7 +52,7 @@ ZSH_THEME="robbyrussell"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+ COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -105,15 +105,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
-# export LC_ALL=en_US.UTF-8
-# export LANG=en_US.UTF-8
-# export LANGUAGE=en_US.UTF-8
-export BROWSER="nohup /usr/lib/firefox-developer-edition/firefox 2>%1 &"
+# export BROWSER="nohup /usr/lib/firefox-developer-edition/firefox 2>%1 &"
 
 # source ~/powerlevel10k/powerlevel10k.zsh-theme
 # source ~/.npm-autocomplete
@@ -146,7 +142,6 @@ antigen bundle emoji-cli
 antigen bundle command-not-found
 
 # NVM bundle
-export NVM_LAZY_LOAD=true
 antigen bundle lukechilds/zsh-nvm
 antigen bundle Sparragus/zsh-auto-nvm-use
 # Tell Antigen that you're done.
@@ -155,11 +150,12 @@ antigen apply
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-alias listening='sudo lsof -i -n -P | grep TCP | grep $PORT'
 
+export NVM_LAZY_LOAD=true
 export LC_ALL=nb_NO.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
-#export LANG=nb_NO.UTF-8
-#export LANGUAGE=nb_NO.UTF-8
+export NVM_DIR="$HOME/.nvm"
+
 alias config='/usr/bin/git --git-dir=/home/jvik/.cfg/ --work-tree=/home/jvik'
+alias listening='sudo lsof -i -n -P | grep TCP | grep $PORT'
