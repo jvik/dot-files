@@ -1,0 +1,14 @@
+# How to enable config files
+
+## Install stow
+
+```sh
+sudo pacman -S stow
+```
+
+```sh
+stow <packagename> # activates symlink
+stow -n <packagename> # trial runs or simulates symlink generation. Effective for checking for errors
+stow -D <packagename> # delete stowed package
+stow -R <packagename> # restows package
+```
