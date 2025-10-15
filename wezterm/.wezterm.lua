@@ -11,6 +11,22 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
+-- Toggle dark/light mode
+wezterm.on("toggle-dark-mode", function(window, pane)
+	local light_scheme = "rose-pine-dawn"
+	local dark_scheme = "rose-pine"
+	local overrides = window:get_config_overrides() or {}
+	wezterm.log_info("Current color scheme is: ", overrides.color_scheme)
+	if overrides.color_scheme == light_scheme then
+		wezterm.log_info("Switching to dark scheme")
+		overrides.color_scheme = dark_scheme
+	else
+		wezterm.log_info("Switching to light scheme")
+		overrides.color_scheme = light_scheme
+	end
+	window:set_config_overrides(overrides)
+end)
+
 config.max_fps = 120
 
 -- config.front_end = "Sotftware"
@@ -18,7 +34,9 @@ config.front_end = "WebGpu"
 config.webgpu_power_preference = "HighPerformance"
 
 -- color config --
-config.color_scheme = "Seti"
+--config.color_scheme = "Seti"
+--config.color_scheme = "Catppuccin Latte"
+config.color_scheme = "Solarized Light (Gogh)"
 config.force_reverse_video_cursor = true
 -- config.default_cursor_style = 'BlinkingBlock' --
 
@@ -28,6 +46,8 @@ config.force_reverse_video_cursor = true
 config.font_size = 12
 config.hide_tab_bar_if_only_one_tab = true
 config.window_close_confirmation = "NeverPrompt"
+
+config.enable_scroll_bar = true
 
 -- quickselect --
 config.quick_select_patterns = {
@@ -86,6 +106,12 @@ config.keys = {
 	{ key = "c", mods = "ALT", action = wezterm.action.CopyTo("ClipboardAndPrimarySelection") },
 	{ key = "v", mods = "ALT", action = wezterm.action.PasteFrom("Clipboard") },
 }
+
+table.insert(config.keys, {
+	key = "l",
+	mods = "CTRL",
+	action = wezterm.action({ EmitEvent = "toggle-dark-mode" }),
+})
 
 -- and finally, return the configuration to wezterm
 return config

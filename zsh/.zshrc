@@ -105,11 +105,11 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export PATH="$HOME/go/bin:$PATH"
+export BROWSER=/usr/bin/firefox
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 alias k="kubectl"
-#alias nvim='flatpak run io.neovim.nvim'
 alias ghfuzzyclone='gh repo list | fzf --preview "echo {}" | awk "{print \$1}" | xargs gh repo clone'
 
 fvim() {
@@ -123,3 +123,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 . "$HOME/.local/bin/env"
+
