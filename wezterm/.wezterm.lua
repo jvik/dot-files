@@ -36,7 +36,7 @@ config.webgpu_power_preference = "HighPerformance"
 -- color config --
 --config.color_scheme = "Seti"
 --config.color_scheme = "Catppuccin Latte"
-config.color_scheme = "Solarized Light (Gogh)"
+config.color_scheme = "rose-pine-dawn"
 config.force_reverse_video_cursor = true
 -- config.default_cursor_style = 'BlinkingBlock' --
 
@@ -48,6 +48,15 @@ config.hide_tab_bar_if_only_one_tab = true
 config.window_close_confirmation = "NeverPrompt"
 
 config.enable_scroll_bar = true
+
+config.mouse_bindings = {
+	-- CMD-click will open the link under the mouse cursor
+	{
+		event = { Up = { streak = 1, button = "Left" } },
+		mods = "SUPER",
+		action = wezterm.action.OpenLinkAtMouseCursor,
+	},
+}
 
 -- quickselect --
 config.quick_select_patterns = {
@@ -71,6 +80,7 @@ config.keys = {
 	{ key = "-", mods = "SHIFT|ALT", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
 	{ key = "_", mods = "SHIFT|ALT", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
 	{ key = "=", mods = "SHIFT|ALT", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+	{ key = "%", mods = "SHIFT|ALT", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
 	{ key = "+", mods = "SHIFT|ALT", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
 	{ key = "h", mods = "SHIFT|ALT", action = act.ActivatePaneDirection("Left") },
 	{ key = "j", mods = "SHIFT|ALT", action = act.ActivatePaneDirection("Down") },
