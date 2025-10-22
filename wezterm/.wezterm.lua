@@ -37,6 +37,11 @@ config.webgpu_power_preference = "HighPerformance"
 --config.color_scheme = "Seti"
 --config.color_scheme = "Catppuccin Latte"
 config.color_scheme = "rose-pine-dawn"
+config.colors = {
+	selection_bg = "#d2d0e7", -- litt mer kontrast enn Rosé Pine Dawn sin default
+	selection_fg = "#26233a", -- mørk tekst på lys bakgrunn
+}
+--config.color_scheme = "Monokai (light) (terminal.sexy)"
 config.force_reverse_video_cursor = true
 -- config.default_cursor_style = 'BlinkingBlock' --
 
@@ -90,7 +95,7 @@ config.keys = {
 	{ key = "j", mods = "CTRL|SHIFT|ALT", action = act.AdjustPaneSize({ "Down", 5 }) },
 	{ key = "k", mods = "CTRL|SHIFT|ALT", action = act.AdjustPaneSize({ "Up", 5 }) },
 	{ key = "l", mods = "CTRL|SHIFT|ALT", action = act.AdjustPaneSize({ "Right", 5 }) },
-	{ key = "<", mods = "SHIFT|CTRL", action = wezterm.action.QuickSelect },
+	{ key = "q", mods = "SHIFT|CTRL", action = wezterm.action.QuickSelect },
 	{ key = "PageUp", action = act.ScrollByPage(-0.5) },
 	{ key = "PageDown", action = act.ScrollByPage(0.5) },
 	{
@@ -117,11 +122,11 @@ config.keys = {
 	{ key = "v", mods = "ALT", action = wezterm.action.PasteFrom("Clipboard") },
 }
 
-table.insert(config.keys, {
-	key = "l",
-	mods = "CTRL",
-	action = wezterm.action({ EmitEvent = "toggle-dark-mode" }),
-})
+-- table.insert(config.keys, {
+--	key = "l",
+--end	mods = "CTRL",
+--	action = wezterm.action({ EmitEvent = "toggle-dark-mode" }),
+--})
 
 -- and finally, return the configuration to wezterm
 return config
