@@ -35,6 +35,9 @@ alias dc='cd'
 alias sl='ls'
 alias sudp='sudo'
 
+alias k="kubectl"
+alias ghfuzzyclone='gh repo list | fzf --preview "echo {}" | awk "{print \$1}" | xargs gh repo clone'
+
 mkcd () {
   \mkdir -p "$1"
   cd "$1"

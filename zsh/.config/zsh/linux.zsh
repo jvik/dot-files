@@ -6,8 +6,6 @@ export XDG_PICTURES_DIR="$HOME/Pictures"
 export XDG_PUBLICSHARE_DIR="$HOME/Public"
 export XDG_VIDEOS_DIR="$HOME/Videos"
 
-export BROWSER='firefox'
-
 alias ls='ls --color=auto'
 
 alias open='xdg-open'
