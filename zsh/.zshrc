@@ -71,7 +71,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git kubectl)
+plugins=(git kubectl terraform azure)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -117,6 +117,12 @@ fvim() {
     file=$(fzf) && nvim "$file"
 }
 
+if [[ -d "$HOME/scripts" ]]; then
+  for f in "$HOME"/scripts/*.sh; do
+    [[ -f "$f" ]] && source "$f"
+  done
+fi
+
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -124,3 +130,4 @@ export NVM_DIR="$HOME/.nvm"
 
 . "$HOME/.local/bin/env"
 
+eval "$(zoxide init zsh)"
