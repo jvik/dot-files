@@ -1,3 +1,15 @@
+function pasta() {
+  if hash pbpaste 2>/dev/null; then
+    pbpaste
+  elif hash xclip 2>/dev/null; then
+    xclip -selection clipboard -o
+  elif [[ -e /tmp/clipboard ]]; then
+    cat /tmp/clipboard
+  else
+    echo ''
+  fi
+}
+
 function copy() {
   if hash pbcopy 2>/dev/null; then
     pbcopy
