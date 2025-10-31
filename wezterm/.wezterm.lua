@@ -34,9 +34,9 @@ config.front_end = "WebGpu"
 config.webgpu_power_preference = "HighPerformance"
 
 -- color config --
---config.color_scheme = "Seti"
+config.color_scheme = "Catppuccin Frappe"
 --config.color_scheme = "Catppuccin Latte"
-config.color_scheme = "rose-pine-dawn"
+--config.color_scheme = "rose-pine-dawn"
 config.colors = {
 	selection_bg = "#d2d0e7", -- litt mer kontrast enn Rosé Pine Dawn sin default
 	selection_fg = "#26233a", -- mørk tekst på lys bakgrunn

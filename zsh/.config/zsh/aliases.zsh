@@ -31,6 +31,8 @@ alias sl='ls'
 alias sudp='sudo'
 
 alias k="kubectl"
+alias i3config="nvim ~/.config/i3/config"
+alias audio="alsamixer"
 
 mkcd () {
   \mkdir -p "$1"
