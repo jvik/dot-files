@@ -10,6 +10,7 @@ prepend '/opt/homebrew/sbin'
 prepend "$HOME/bin"
 prepend "$HOME/go/bin:$PATH"
 prepend '/home/linuxbrew/.linuxbrew/bin'
+prepend "$HOME/.local/bin:$PATH"
 unset prepend
 export PATH
 

@@ -30,3 +30,14 @@ function copy() {
 function ghfuzzyclone() {
         gh repo list kystverket | fzf --preview "echo {}" | awk '{print $1}' | xargs gh repo clone
 }
+
+function t() {
+  {
+    exec </dev/tty
+    exec <&1
+    local session
+    session=$(sesh list -t -c | fzf --height 40% --reverse --border-label ' sesh ' --border --prompt '⚡  ')
+    [[ -z "$session" ]] && return
+    sesh connect $session
+  }
+}

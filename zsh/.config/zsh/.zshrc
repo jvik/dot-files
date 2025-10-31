@@ -23,5 +23,3 @@ fvim() {
     file=$(fzf) && nvim "$file"
 }
 
-
-
