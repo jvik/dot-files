@@ -26,3 +26,7 @@ function copy() {
     fi
   fi
 }
+
+function ghfuzzyclone() {
+        gh repo list kystverket | fzf --preview "echo {}" | awk '{print $1}' | xargs gh repo clone
+}

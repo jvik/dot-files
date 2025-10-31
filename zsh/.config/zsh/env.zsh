@@ -35,6 +35,14 @@ export NVM_DIR="$HOME/.nvm"
 
 # zsh stuff
 
+#source "$HOME/.config/zsh/antigen.zsh"
+#antigen use oh-my-zsh
+#antigen bundle jeffreytse/zsh-vi-mode
+# Load the theme.
+#antigen theme robbyrussell
+
+# Tell Antigen that you're done.
+#antigen apply
 ZSH_THEME="robbyrussell"
 
 export HISTFILE="$XDG_CACHE_HOME/zsh_history"
@@ -45,7 +53,8 @@ export CLICOLOR=1
 
 export ZLE_RPROMPT_INDENT=0
 
-plugins=(git kubectl terraform azure)
+plugins=(vi-mode git kubectl terraform azure)
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 
 # Load other stuff
 

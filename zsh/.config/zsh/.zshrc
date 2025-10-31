@@ -2,6 +2,7 @@
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 source "$ZDOTDIR/env.zsh"
 source "$ZDOTDIR/aliases.zsh"
+source "$ZDOTDIR/functions.zsh"
 
 # Load oh-my-zsh
 export ZSH="$HOME/.oh-my-zsh"

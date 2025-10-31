@@ -4,6 +4,8 @@ alias 3..='cd ../../..'
 alias 4..='cd ../../../..'
 alias 5..='cd ../../../../..'
 
+alias reload-zsh='source $ZDOTDIR/.zshrc'
+
 alias q='exit'
 
 alias screen='screen -U'
@@ -19,13 +21,6 @@ if [[ "$EDITOR" == nvim ]]; then
   alias vimdiff='nvim -d'
 fi
 
-if [ -z ${EVANHAHN_IS_SOURCING_ZSH_FROM_ANOTHER_SHELL+x} ]; then
-  alias mv='nocorrect mv -i -v'
-  alias cp='nocorrect cp -i -v'
-  alias mkdir='nocorrect mkdir -p -v'
-  alias ln='nocorrect ln -v'
-fi
-
 alias ,,='cd ..'
 alias ..l='cd .. && ls'
 alias :q='exit'
@@ -36,7 +31,6 @@ alias sl='ls'
 alias sudp='sudo'
 
 alias k="kubectl"
-alias ghfuzzyclone='gh repo list | fzf --preview "echo {}" | awk "{print \$1}" | xargs gh repo clone'
 
 mkcd () {
   \mkdir -p "$1"
