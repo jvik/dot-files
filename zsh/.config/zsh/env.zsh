@@ -11,6 +11,7 @@ prepend "$HOME/bin"
 prepend "$HOME/go/bin:$PATH"
 prepend '/home/linuxbrew/.linuxbrew/bin'
 prepend "$HOME/.local/bin:$PATH"
+prepend "/home/jorgen/.cargo/bin"
 unset prepend
 export PATH
 
