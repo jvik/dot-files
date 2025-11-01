@@ -138,7 +138,7 @@
 		},
 		"scroll-step": 1,
 		// "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-		"on-click": "pavucontrol",
+		"on-click": "flatpak run com.saivert.pwvucontrol",
     "tooltip": false
 	},
   "custom/notification": {
