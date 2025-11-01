@@ -221,6 +221,10 @@ bindsym $mod+r mode "resize"
     # Special key to take a screenshot with grim
     bindsym Print exec grim
 
+    bindsym --locked XF86AudioPrev exec playerctl previous
+    bindsym --locked XF86AudioPlay exec playerctl play-pause
+    bindsym --locked XF86AudioNext exec playerctl next
+
 #
 # Status Bar:
 #
@@ -249,5 +253,12 @@ input * {
     xkb_layout "no"
 }
 focus_on_window_activation urgent
+
+# Notification Daemon
+exec_always "killall swaync; swaync"
+
+
+# Toggle control center
+bindsym $mod+Shift+n exec swaync-client -t -sw
 
 include /etc/sway/config.d/*
