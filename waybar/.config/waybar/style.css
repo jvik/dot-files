@@ -28,7 +28,7 @@
 @define-color braqua	#8ec07c;
 @define-color white	#ebdbb2;
 @define-color bg2	#504945;
-
+@define-color trayarrow #928374; /* gruvbox gray variant */
 
 @define-color warning 	@bryellow;
 @define-color critical	@red;
@@ -191,7 +191,9 @@
 }
 
 #tray {
-	background: @date;
+  background: @trayarrow;
+  color: @black;
+	/* background: @date; */
 }
 
 #clock.date {
@@ -204,6 +206,12 @@
 	color: @black;
 }
 
+#custom-notification {
+    background: @time;
+    color: @black;
+    padding-right: 6pt;
+}
+
 #custom-arrow1 {
 	font-size: 11pt;
 	color: @time;
@@ -212,14 +220,14 @@
 
 #custom-arrow2 {
 	font-size: 11pt;
-	color: @date;
+	color: @trayarrow;
 	background: @layout;
 }
 
 #custom-arrow3 {
 	font-size: 11pt;
 	color: @layout;
-	background: @battery;
+	background: @temp;
 }
 
 #custom-arrow4 {
@@ -262,5 +270,11 @@
 	font-size: 11pt;
 	color: @unfocused;
 	background: transparent;
+}
+
+#custom-arrow-tray {
+    font-size: 11pt;
+    color: @date;
+    background: @trayarrow;
 }
 

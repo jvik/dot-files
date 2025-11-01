@@ -20,15 +20,15 @@
 		"cpu",
 		"custom/arrow5",
 		"temperature",
-		"custom/arrow4",
-		"battery",
 		"custom/arrow3",
 		"sway/language",
 		"custom/arrow2",
 		"tray",
+    "custom/arrow-tray",
 		"clock#date",
 		"custom/arrow1",
-		"clock#time"
+		"clock#time",
+    "custom/notification"
 	],
 
 	// Modules
@@ -141,7 +141,26 @@
 		"on-click": "pavucontrol",
     "tooltip": false
 	},
-
+  "custom/notification": {
+    "tooltip": true,
+    "format": "<span size='12pt'>{icon}</span>",
+    "format-icons": {
+      "notification": "󱅫",
+      "none": "󰂜",
+      "dnd-notification": "󰂠",
+      "dnd-none": "󰪓",
+      "inhibited-notification": "󰂛",
+      "inhibited-none": "󰪑",
+      "dnd-inhibited-notification": "󰂛",
+      "dnd-inhibited-none": "󰪑"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
 	"temperature": {
 		"critical-threshold": 90,
 		"interval": 5,
@@ -209,7 +228,12 @@
 	"custom/arrow10": {
 		"format": "",
 		"tooltip": false
-	}
+	},
+  "custom/arrow-tray": {
+    "format": "",
+    "tooltip": false
+},
+
 }
 
 // vi:ft=jsonc
