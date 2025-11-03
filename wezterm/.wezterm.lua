@@ -83,20 +83,20 @@ config.use_dead_keys = false
 
 -- keys --
 config.keys = {
-	-- { key = 'U', mods = 'SHIFT|ALT|CTRL', action = act.SplitVertical{ domain =  'CurrentPaneDomain' } }, --
-	{ key = "-", mods = "SHIFT|ALT", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
-	{ key = "_", mods = "SHIFT|ALT", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
-	{ key = "=", mods = "SHIFT|ALT", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
-	{ key = "%", mods = "SHIFT|ALT", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
-	{ key = "+", mods = "SHIFT|ALT", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
-	{ key = "h", mods = "SHIFT|ALT", action = act.ActivatePaneDirection("Left") },
-	{ key = "j", mods = "SHIFT|ALT", action = act.ActivatePaneDirection("Down") },
-	{ key = "k", mods = "SHIFT|ALT", action = act.ActivatePaneDirection("Up") },
-	{ key = "l", mods = "SHIFT|ALT", action = act.ActivatePaneDirection("Right") },
-	{ key = "h", mods = "CTRL|SHIFT|ALT", action = act.AdjustPaneSize({ "Left", 5 }) },
-	{ key = "j", mods = "CTRL|SHIFT|ALT", action = act.AdjustPaneSize({ "Down", 5 }) },
-	{ key = "k", mods = "CTRL|SHIFT|ALT", action = act.AdjustPaneSize({ "Up", 5 }) },
-	{ key = "l", mods = "CTRL|SHIFT|ALT", action = act.AdjustPaneSize({ "Right", 5 }) },
+	-- { key = 'U', mods = 'SHIFT|SUPER|CTRL', action = act.SplitVertical{ domain =  'CurrentPaneDomain' } }, --
+	{ key = "-", mods = "SHIFT|SUPER", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
+	{ key = "_", mods = "SHIFT|SUPER", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
+	{ key = "=", mods = "SHIFT|SUPER", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+	{ key = "%", mods = "SHIFT|SUPER", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+	{ key = "+", mods = "SHIFT|SUPER", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+	{ key = "h", mods = "SHIFT|SUPER", action = act.ActivatePaneDirection("Left") },
+	{ key = "j", mods = "SHIFT|SUPER", action = act.ActivatePaneDirection("Down") },
+	{ key = "k", mods = "SHIFT|SUPER", action = act.ActivatePaneDirection("Up") },
+	{ key = "l", mods = "SHIFT|SUPER", action = act.ActivatePaneDirection("Right") },
+	{ key = "h", mods = "CTRL|SHIFT|SUPER", action = act.AdjustPaneSize({ "Left", 5 }) },
+	{ key = "j", mods = "CTRL|SHIFT|SUPER", action = act.AdjustPaneSize({ "Down", 5 }) },
+	{ key = "k", mods = "CTRL|SHIFT|SUPER", action = act.AdjustPaneSize({ "Up", 5 }) },
+	{ key = "l", mods = "CTRL|SHIFT|SUPER", action = act.AdjustPaneSize({ "Right", 5 }) },
 	{ key = "q", mods = "SHIFT|CTRL", action = wezterm.action.QuickSelect },
 	{ key = "PageUp", action = act.ScrollByPage(-0.5) },
 	{ key = "PageDown", action = act.ScrollByPage(0.5) },
@@ -120,8 +120,8 @@ config.keys = {
 			window:perform_action(wezterm.action.SendKey({ key = "v", mods = "CTRL" }), pane)
 		end),
 	},
-	{ key = "c", mods = "ALT", action = wezterm.action.CopyTo("ClipboardAndPrimarySelection") },
-	{ key = "v", mods = "ALT", action = wezterm.action.PasteFrom("Clipboard") },
+	{ key = "c", mods = "SUPER", action = wezterm.action.CopyTo("ClipboardAndPrimarySelection") },
+	{ key = "v", mods = "SUPER", action = wezterm.action.PasteFrom("Clipboard") },
 }
 
 -- table.insert(config.keys, {
