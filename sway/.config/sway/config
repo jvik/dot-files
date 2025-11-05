@@ -18,7 +18,7 @@ set $right l
 set $term wezterm
 # Your preferred application launcher
 #set $menu wmenu-run
-set $menu rofi -show drun -m 1
+set $menu rofi -show drun -m 5
 #set $menu albert show
 
 ### Output configuration
@@ -272,5 +272,6 @@ exec_always kanshi
 
 # Toggle control center
 bindsym $mod+Shift+n exec swaync-client -t -sw
+bindsym $mod+p exec grim -g "$(slurp)" - | wl-copy --type image/png
 
 include /etc/sway/config.d/*
