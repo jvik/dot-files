@@ -8,12 +8,10 @@ prepend '/usr/local/bin'
 prepend '/opt/homebrew/bin'
 prepend '/opt/homebrew/sbin'
 prepend "$HOME/bin"
-prepend "$HOME/go/bin:$PATH"
+prepend "$HOME/go/bin"
 prepend '/home/linuxbrew/.linuxbrew/bin'
-prepend "$HOME/.local/bin:$PATH"
-prepend "/home/jorgen/.cargo/bin"
-unset prepend
-export PATH
+prepend "$HOME/.local/bin"
+prepend "$HOME/.cargo/bin"
 
 if hash nvim 2>/dev/null; then
   export EDITOR=nvim

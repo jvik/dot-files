@@ -259,7 +259,6 @@ focus_on_window_activation urgent
 # Notification Daemon
 exec_always "killall swaync; swaync"
 
-
 # Toggle control center
 bindsym $mod+Shift+n exec swaync-client -t -sw
 
