@@ -1,0 +1,19 @@
+# ===========================
+# Kanshi configuration
+# Generated for DP-7 + eDP-1 setup
+# ===========================
+
+# Profile for desk setup (external LG + laptop)
+profile desk {
+    # External LG 38GN950 as main display
+    output DP-7 enable mode 3840x1600 position 1920,0
+
+    # Laptop screen to the left, vertically centered
+    output eDP-1 enable mode 1920x1200 position 0,200
+}
+
+# Laptop-only profile
+profile laptop {
+    output eDP-1 enable mode 1920x1200 position 0,0
+    output DP-7 disable
+}
