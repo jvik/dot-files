@@ -247,10 +247,11 @@ bar {
 
 # Everyting floats down here
 for_window [app_id="copyq"] floating enable
-for_window [title="Extension: (Bitwarden Password Manager)"] floating enable
+for_window [app_id="screenkey"] floating enable
 for_window [app_id="Calculator"] floating enable
 for_window [app_id="org.pulseaudio.pavucontrol"] floating enable
 for_window [app_id="com.saivert.pwvucontrol"] floating enable
+for_window [app_id="^firefox*" title="^Extension: *"] floating enable
 for_window [app_id="nmwui"] floating enable
 
 # Set default workspace
