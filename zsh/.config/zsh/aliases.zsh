@@ -34,6 +34,8 @@ alias k="kubectl"
 alias i3config="nvim ~/.config/i3/config"
 alias audio="alsamixer"
 
+alias bw="flatpak run --command=bw com.bitwarden.desktop"
+
 mkcd () {
   \mkdir -p "$1"
   cd "$1"

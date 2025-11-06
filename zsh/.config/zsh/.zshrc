@@ -3,6 +3,7 @@
 source "$ZDOTDIR/env.zsh"
 source "$ZDOTDIR/aliases.zsh"
 source "$ZDOTDIR/functions.zsh"
+source "$ZDOTDIR/local.zsh"
 
 # Load oh-my-zsh
 export ZSH="$HOME/.oh-my-zsh"
