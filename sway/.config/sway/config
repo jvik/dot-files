@@ -44,10 +44,14 @@ output * bg #333333 solid_color
 
 set $locker 'swaylock -f -c 444444'
 
+set $monitorDisableTimeout 300
+set $lockerTimeout 360
+set $suspendTimeout 600
+
 exec_always killall swayidle; swayidle -w \
-timeout 300 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-timeout 360 $locker \
-timeout 600 'systemctl suspend' before-sleep $locker before-sleep $locker
+timeout $monitorDisableTimeout 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+timeout $lockerTimeout $locker \
+timeout $suspendTimeout 'systemctl suspend' before-sleep $locker before-sleep $locker
 
 bindsym $mod+Control+l exec $locker
 #          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
@@ -283,3 +287,4 @@ bindsym $mod+Shift+n exec swaync-client -t -sw
 bindsym $mod+p exec grim -g "$(slurp)" - | wl-copy --type image/png
 
 include /etc/sway/config.d/*
+include ~/.config/sway/config.local
