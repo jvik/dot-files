@@ -250,7 +250,6 @@ bar {
 #    }
 #}
 
-
 # Everyting floats down here
 for_window [app_id="copyq"] floating enable
 for_window [class="Bitwarden"] floating enable
@@ -265,11 +264,11 @@ for_window [title="^(Picture-in-Picture)$"] floating enable
 for_window [title="Copying *"] floating enable
 for_window [title="Moving *"] floating enable
 for_window [title="Firefox — Sharing Indicator"] floating enable
+for_window [class="Signal"] floating enable
 
 # Set default workspace
 assign [title="Plexamp"] 10
 assign [app_id="spotify"] 10
-assign [class="Signal"] 4
 
 
 input * {
