@@ -1,14 +1,12 @@
 {
 	"layer": "top",
 	"position": "top",
-
 	"modules-left": [
 		"sway/mode",
 		"sway/workspaces",
 		"custom/arrow10",
 		"sway/window"
 	],
-
 	"modules-right": [
 		"custom/arrow9",
 		"pulseaudio",
@@ -24,15 +22,13 @@
 		"sway/language",
 		"custom/arrow2",
 		"tray",
-    "custom/arrow-tray",
+		"custom/arrow-tray",
 		"clock#date",
 		"custom/arrow1",
 		"clock#time",
-    "custom/notification"
+		"custom/notification"
 	],
-
 	// Modules
-
 	"battery": {
 		"interval": 10,
 		"states": {
@@ -54,20 +50,17 @@
 		],
 		"tooltip": false
 	},
-
 	"clock#time": {
 		"interval": 10,
 		"format": "{:%H:%M}",
 		"tooltip": false
 	},
-
 	"clock#date": {
 		"interval": 20,
 		"format": "{:%e %b %Y}",
 		"tooltip": false
 		//"tooltip-format": "{:%e %B %Y}"
 	},
-
 	"cpu": {
 		"interval": 5,
 		"tooltip": false,
@@ -78,14 +71,12 @@
 			"critical": 90
 		}
 	},
-
 	"sway/language": {
 		"format": " {}",
 		"min-length": 5,
 		"on-click": "swaymsg 'input * xkb_switch_layout next'",
 		"tooltip": false
 	},
-
 	"memory": {
 		"interval": 5,
 		"format": "{used:0.1f}G/{total:0.1f}G",
@@ -95,7 +86,6 @@
 		},
 		"tooltip": false
 	},
-
 	"network": {
 		"interval": 5,
 		"format-wifi": " {essid} ({signalStrength}%)",
@@ -104,25 +94,21 @@
 		"format-alt": "{ipaddr}/{cidr}",
 		"tooltip": false
 	},
-
 	"sway/mode": {
 		"format": "{}",
 		"tooltip": false
 	},
-
 	"sway/window": {
 		"format": "{}",
 		"max-length": 30,
 		"tooltip": false
 	},
-
 	"sway/workspaces": {
 		"disable-scroll-wraparound": true,
 		"smooth-scrolling-threshold": 4,
 		"enable-bar-scroll": true,
 		"format": "{name}"
 	},
-
 	"pulseaudio": {
 		"format": "{icon} {volume}%",
 		"format-bluetooth": "{icon} {volume}%",
@@ -134,33 +120,36 @@
 			"phone": "",
 			"portable": "",
 			"car": "",
-			"default": ["", ""]
+			"default": [
+				"",
+				""
+			]
 		},
 		"scroll-step": 1,
 		// "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
 		"on-click": "flatpak run com.saivert.pwvucontrol",
-    "tooltip": false
+		"tooltip": false
 	},
-  "custom/notification": {
-    "tooltip": true,
-    "format": "<span size='12pt'>{icon}</span>",
-    "format-icons": {
-      "notification": "󱅫",
-      "none": "󰂜",
-      "dnd-notification": "󰂠",
-      "dnd-none": "󰪓",
-      "inhibited-notification": "󰂛",
-      "inhibited-none": "󰪑",
-      "dnd-inhibited-notification": "󰂛",
-      "dnd-inhibited-none": "󰪑"
-    },
-    "return-type": "json",
-    "exec-if": "which swaync-client",
-    "exec": "swaync-client -swb",
-    "on-click": "swaync-client -t -sw",
-    "on-click-right": "swaync-client -d -sw",
-    "escape": true
-  },
+	"custom/notification": {
+		"tooltip": true,
+		"format": "<span size='12pt'>{icon}</span>",
+		"format-icons": {
+			"notification": "󱅫",
+			"none": "󰂜",
+			"dnd-notification": "󰂠",
+			"dnd-none": "󰪓",
+			"inhibited-notification": "󰂛",
+			"inhibited-none": "󰪑",
+			"dnd-inhibited-notification": "󰂛",
+			"dnd-inhibited-none": "󰪑"
+		},
+		"return-type": "json",
+		"exec-if": "which swaync-client",
+		"exec": "swaync-client -swb",
+		"on-click": "swaync-client -t -sw",
+		"on-click-right": "swaync-client -d -sw",
+		"escape": true
+	},
 	"temperature": {
 		"critical-threshold": 90,
 		"interval": 5,
@@ -174,67 +163,53 @@
 		],
 		"tooltip": false
 	},
-
 	"tray": {
-		"icon-size": 18
-		//"spacing": 10
+		"icon-size": 18,
+		"spacing": 4
 	},
-
 	"custom/arrow1": {
 		"format": "",
 		"tooltip": false
 	},
-
 	"custom/arrow2": {
 		"format": "",
 		"tooltip": false
 	},
-
 	"custom/arrow3": {
 		"format": "",
 		"tooltip": false
 	},
-
 	"custom/arrow4": {
 		"format": "",
 		"tooltip": false
 	},
-
 	"custom/arrow5": {
 		"format": "",
 		"tooltip": false
 	},
-
 	"custom/arrow6": {
 		"format": "",
 		"tooltip": false
 	},
-
 	"custom/arrow7": {
 		"format": "",
 		"tooltip": false
 	},
-
 	"custom/arrow8": {
 		"format": "",
 		"tooltip": false
 	},
-
 	"custom/arrow9": {
 		"format": "",
 		"tooltip": false
 	},
-
 	"custom/arrow10": {
 		"format": "",
 		"tooltip": false
 	},
-  "custom/arrow-tray": {
-    "format": "",
-    "tooltip": false
-},
-
+	"custom/arrow-tray": {
+		"format": "",
+		"tooltip": false
+	},
 }
-
 // vi:ft=jsonc
-
