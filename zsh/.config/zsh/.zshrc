@@ -3,11 +3,15 @@
 source "$ZDOTDIR/env.zsh"
 source "$ZDOTDIR/aliases.zsh"
 source "$ZDOTDIR/functions.zsh"
-source "$ZDOTDIR/local.zsh"
 
 # Load oh-my-zsh
 export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
+
+
+if [[ -f "$ZDOTDIR/local.zsh" ]]; then
+  source "$ZDOTDIR/local.zsh"
+fi
 
 if [[ "$(uname -s)" == 'Linux' ]]; then
   source "$ZDOTDIR/linux.zsh"
