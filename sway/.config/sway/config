@@ -250,6 +250,10 @@ bar {
 #    }
 #}
 
+# Border configuration for easier mouse resizing
+default_border normal 2
+default_floating_border normal 2
+
 # Everyting floats down here
 for_window [app_id="copyq"] floating enable
 for_window [class="Bitwarden"] floating enable
