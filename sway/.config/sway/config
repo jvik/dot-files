@@ -307,7 +307,6 @@ focus_on_window_activation urgent
 
 # Autostart background services
 exec_always "killall swaync; swaync"
-exec_always kanshi
 exec_always "killall autotiling; $HOME/.local/bin/autotiling"
 
 # Toggle control center
