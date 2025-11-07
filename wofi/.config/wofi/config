@@ -12,5 +12,5 @@ prompt=Search...
 columns=2
 term=wezterm
 location=center
-matching=fuzzy
+matching=contains
 orientation=vertical
