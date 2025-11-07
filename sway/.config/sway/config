@@ -75,8 +75,11 @@ bindsym $mod+Control+l exec $locker
 
 input * {
     xkb_layout "no"
-    middle_emulation disabled
+    middle_emulation enabled
 }
+
+input "1739:52839:SYNA8018:00_06CB:CE67_Touchpad" tap enabled
+
 
 ### Key bindings
 #
