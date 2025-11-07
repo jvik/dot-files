@@ -78,7 +78,10 @@ input * {
     middle_emulation enabled
 }
 
-input "1739:52839:SYNA8018:00_06CB:CE67_Touchpad" tap enabled
+input "1739:52839:SYNA8018:00_06CB:CE67_Touchpad"  {
+tap enabled
+pointer_accel 0.2
+}
 
 
 ### Key bindings
