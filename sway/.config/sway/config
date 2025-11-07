@@ -280,9 +280,10 @@ default_border normal 2
 default_floating_border normal 2
 
 # Everyting floats down here
-for_window [app_id="nmwui|wdisplays|blueman-manager"] floating enable # System utilities
+for_window [app_id="wdisplays|blueman-manager"] floating enable # System utilities
 for_window [app_id="copyq"] floating enable
 for_window [class="Bitwarden"] floating enable
+for_window [app_id="nmwui"] floating enable, move position center
 for_window [app_id="Calculator|snap-store"] floating enable
 for_window [app_id="org.pulseaudio.pavucontrol"] floating enable
 for_window [app_id="com.saivert.pwvucontrol"] floating enable
