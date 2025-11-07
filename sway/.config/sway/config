@@ -8,18 +8,19 @@ include ~/.config/sway/colors/gruvbox
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
-set $mod Mod1
+set $mod Mod4
+
 # Home row direction keys, like vim
 set $left h
 set $down j
 set $up k
 set $right l
+
 # Your preferred terminal emulator
 set $term wezterm
+
 # Your preferred application launcher
-#set $menu wmenu-run
-set $menu rofi -show drun
-#set $menu albert show
+set $menu wofi --show drun
 
 ### Output configuration
 #
@@ -39,9 +40,6 @@ output * bg #333333 solid_color
 # Example configuration:
 #
 #
-
-#exec swayidle idlehint 1
-
 set $locker 'swaylock -f -c 444444'
 
 set $monitorDisableTimeout 300
@@ -214,6 +212,22 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 #
 
+# mode "present" {
+#     # command starts mirroring
+#     bindsym m mode "default"; exec wl-present mirror
+#     # these commands modify an already running mirroring window
+#     bindsym o mode "default"; exec wl-present set-output
+#     bindsym r mode "default"; exec wl-present set-region
+#     bindsym Shift+r mode "default"; exec wl-present unset-region
+#     bindsym s mode "default"; exec wl-present set-scaling
+#     bindsym f mode "default"; exec wl-present toggle-freeze
+#     bindsym c mode "default"; exec wl-present custom
+
+#     # return to default mode
+#     bindsym Return mode "default"
+#     bindsym Escape mode "default"
+# }
+bindsym $mod+shift+p exec ~/scripts/present-select.sh
 
 bindsym $mod+Control+Shift+Right move workspace to output right
 bindsym $mod+Control+Shift+Left move workspace to output left
@@ -238,8 +252,8 @@ bindsym $mod+Control+Shift+Up move workspace to output up
     bindsym --locked XF86AudioPlay exec playerctl play-pause
     bindsym --locked XF86AudioNext exec playerctl next
 
-
-bindsym $mod+Shift+v exec clipman pick -t rofi
+    # Clipboard manager
+    bindsym $mod+Shift+v exec clipman pick -t wofi
 #
 # Status Bar:
 #
@@ -255,15 +269,13 @@ default_border normal 2
 default_floating_border normal 2
 
 # Everyting floats down here
+for_window [app_id="nmwui|wdisplays|blueman-manager"] floating enable # System utilities
 for_window [app_id="copyq"] floating enable
 for_window [class="Bitwarden"] floating enable
-for_window [app_id="screenkey"] floating enable
-for_window [app_id="Calculator"] floating enable
+for_window [app_id="Calculator|snap-store"] floating enable
 for_window [app_id="org.pulseaudio.pavucontrol"] floating enable
 for_window [app_id="com.saivert.pwvucontrol"] floating enable
 for_window [app_id="^firefox*" title="^Extension: *"] floating enable
-for_window [app_id="nmwui"] floating enable
-for_window [app_id="blueman-manager"] floating enable
 for_window [title="^(Picture-in-Picture)$"] floating enable
 for_window [title="Copying *"] floating enable
 for_window [title="Moving *"] floating enable
@@ -274,21 +286,26 @@ for_window [class="Signal"] floating enable
 assign [title="Plexamp"] 10
 assign [app_id="spotify"] 10
 
+# Auto launch default applications
+exec flatpak run com.bitwarden.desktop
+
 
 input * {
     xkb_layout "no"
 }
+
 focus_on_window_activation urgent
 
-# Notification Daemon
+# Autostart background services
 exec_always "killall swaync; swaync"
 exec_always kanshi
 exec_always "killall autotiling; $HOME/.local/bin/autotiling"
-
 
 # Toggle control center
 bindsym $mod+Shift+n exec swaync-client -t -sw
 bindsym $mod+p exec grim -g "$(slurp)" - | wl-copy --type image/png
 
 include /etc/sway/config.d/*
+
+# Local config overrides
 include ~/.config/sway/config.local
